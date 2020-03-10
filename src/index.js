@@ -3,5 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const ThemeContext = React.createContext()
+
+ReactDOM.render(
+    <ThemeContext.Provider>
+        <App />
+    </ThemeContext.Provider>,
+    document.getElementById('root'));
 
