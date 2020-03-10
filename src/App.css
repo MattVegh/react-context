@@ -22,3 +22,9 @@ button {
   background-color: whitesmoke;
   color: #333333;
 }
+
+.user-header {
+  padding: 20px;
+  background-color: #333333;
+  color: whitesmoke;
+}

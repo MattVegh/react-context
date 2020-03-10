@@ -5,6 +5,7 @@ class Button extends Component {
     render() {
         console.log('context', this.context)
         const theme = this.context + '-theme'
+        
         return (
             <button className={theme}>Switch Theme</button>
         )    
