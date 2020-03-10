@@ -5,9 +5,10 @@ class UserHeader extends Component {
     static contextType = UsernameContext
     render() {
         console.log(this.context)
+        const username = this.context
         return (
             <header className='user-header'>
-                <p>Welcome, {this.context}!</p>
+                <p>Welcome, {username}!</p>
             </header>
         )    
     }

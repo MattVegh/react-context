@@ -6,18 +6,21 @@ import UserHeader from './Components/UserHeader'
 import UsernameContext from './UsernameContext'
 
 class App extends Component {
+
   static contextType = UsernameContext
+
   render() {
-  return (
-    <div className="App">
-      <UserHeader />
-      <main>
-        <p className="main">No new notifications, {this.context}! 🎉</p>
-      </main>
-      <Header />
-      <Button />
-    </div>
-  );
+    const username = this.context
+    return (
+      <div className="App">
+        <UserHeader />
+        <main>
+          <p className="main">No new notifications, {username}! 🎉</p>
+        </main>
+        <Header />
+        <Button />
+      </div>
+    );
   }
 }
 
