@@ -5,7 +5,7 @@ function Button() {
     return (
         <ThemeContextConsumer>
             {theme => (
-                <button className={theme}>Switch Theme</button>
+                <button className={`${theme}-theme`}>Switch Theme</button>
             )}
             
         </ThemeContextConsumer>

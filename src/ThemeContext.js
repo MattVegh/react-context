@@ -5,7 +5,7 @@ class ThemeContextProvider extends Component {
 
     render() {
         return(
-        <Provider value={'light'}>
+        <Provider value={'dark'}>
             {this.props.children}
         </Provider>
         )
