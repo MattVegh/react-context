@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ThemeContext from './ThemeContext'
 
-const ThemeContext = React.createContext()
 
 ReactDOM.render(
-    <ThemeContext.Provider>
+    <ThemeContext.Provider value={'light'}>
         <App />
     </ThemeContext.Provider>,
     document.getElementById('root'));
