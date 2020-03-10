@@ -1,17 +1,17 @@
-import React, {Component} from "react"
+import React from "react"
 import UsernameContext from '../UsernameContext'
 
-class UserHeader extends Component {
-    static contextType = UsernameContext
-    render() {
-        console.log(this.context)
-        const username = this.context
-        return (
-            <header className='user-header'>
-                <p>Welcome, {username}!</p>
-            </header>
-        )    
-    }
+function UserHeader() {
+    return (
+        <UsernameContext.Consumer>
+            {username => (
+                <header className='user-header'>
+                    <p>Welcome, {username}!</p>
+                </header>
+            )}
+
+        </UsernameContext.Consumer>
+    )
 }
 
 export default UserHeader

@@ -5,23 +5,24 @@ import Button from './Components/Button'
 import UserHeader from './Components/UserHeader'
 import UsernameContext from './UsernameContext'
 
-class App extends Component {
+function App() {
+  return (
 
-  static contextType = UsernameContext
+    <div className="App">
+      <UserHeader />
+      <UsernameContext.Consumer>
+        {username => (
+          <main>
+            <p className="main">No new notifications, {username}! 🎉</p>
+          </main>
+        )}
 
-  render() {
-    const username = this.context
-    return (
-      <div className="App">
-        <UserHeader />
-        <main>
-          <p className="main">No new notifications, {username}! 🎉</p>
-        </main>
-        <Header />
-        <Button />
-      </div>
-    );
-  }
+      </UsernameContext.Consumer>
+      <Header />
+      <Button />
+    </div>
+  )
 }
+
 
 export default App;
