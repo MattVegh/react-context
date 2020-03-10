@@ -8,7 +8,7 @@ import UsernameContext from './UsernameContext'
 
 ReactDOM.render(
     <UsernameContext.Provider value={'Matt'}>
-        <ThemeContext.Provider value={'dark'}>
+        <ThemeContext.Provider value={'light'}>
             <App />
         </ThemeContext.Provider>
     </UsernameContext.Provider>,
