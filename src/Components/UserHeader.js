@@ -4,7 +4,7 @@ import { UserContextConsumer } from '../UsernameContext'
 function UserHeader() {
     return (
         <UserContextConsumer>
-            {username => (
+            {({username}) => (
                 <header className='user-header'>
                     <p>Welcome, {username}!</p>
                 </header>
