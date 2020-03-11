@@ -7,15 +7,16 @@ class UserContextProvider extends Component {
         username: 'Matt'
     }
 
+    changeUsername = () => {
+        this.setState({
+            username: this.event.target
+        })
+    }
 
     render() {
         return (
-            <Provider value={
-                {
-                    username: this.state.username
-                }
-            }>
-
+            <Provider value={this.state.username}>
+                {this.props.children}
             </Provider>
         )
     }

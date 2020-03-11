@@ -8,9 +8,16 @@ import { UserContextConsumer } from './UsernameContext'
 class App extends Component {
 
   state = {
-    username: ''
+    newUsername: ''
   }
+
+  handleChange = (e) => {
+    const {name, value} = e.target
+    this.setState({[name]: value})
+}
+
   render() {
+    console.log(this.state)
     return (
 
       <div className="App">
@@ -30,10 +37,10 @@ class App extends Component {
           type="text"
           name="username"
           placeholder="New username"
-          value={''}
-          onChange={''}
+          value={this.state.newUsername}
+          onChange={this.handleChange}
         />
-        <button onClick={''}>Change Username</button>
+        <button >Change Username</button>
       </div>
     )
   }
