@@ -5,12 +5,13 @@ function Button() {
     return (
         <ThemeContextConsumer>
             {context => (
-                <button 
-                className={`${context.theme}-theme`}
-                onClick={context.toggleTheme}
-                >Switch Theme</button>
+                <button
+                    className={`${context.theme}-theme`}
+                    onClick={context.toggleTheme}>
+                    Switch Theme
+                </button>
             )}
-            
+
         </ThemeContextConsumer>
     )
 }
