@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { ThemeContextProvider } from './ThemeContext'
-import UsernameContext from './UsernameContext'
+import { UserContextProvider } from './UsernameContext'
 
 
 ReactDOM.render(
-    <UsernameContext.Provider value={'Matt'}>
+    <UserContextProvider>
         <ThemeContextProvider >
             <App />
         </ThemeContextProvider>
-    </UsernameContext.Provider>,
+    </UserContextProvider>,
     document.getElementById('root'));
 

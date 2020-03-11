@@ -1,27 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header'
 import Button from './Components/Button'
 import UserHeader from './Components/UserHeader'
-import UsernameContext from './UsernameContext'
+import { UserContextConsumer } from './UsernameContext'
 
-function App() {
-  return (
+class App extends Component {
 
-    <div className="App">
-      <UserHeader />
-      <UsernameContext.Consumer>
-        {username => (
-          <main>
-            <p className="main">No new notifications, {username}! 🎉</p>
-          </main>
-        )}
+  state = {
+    username: ''
+  }
+  render() {
+    return (
 
-      </UsernameContext.Consumer>
-      <Header />
-      <Button />
-    </div>
-  )
+      <div className="App">
+        <UserHeader />
+        <UserContextConsumer>
+          {username => (
+            <main>
+              <p className="main">No new notifications, {username}! 🎉</p>
+            </main>
+          )}
+
+        </UserContextConsumer>
+        <Header />
+        <Button />
+
+        <input
+          type="text"
+          name="username"
+          placeholder="New username"
+          value={''}
+          onChange={''}
+        />
+        <button onClick={''}>Change Username</button>
+      </div>
+    )
+  }
 }
 
 
